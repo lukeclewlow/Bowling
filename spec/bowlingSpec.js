@@ -42,7 +42,16 @@ describe ("Bowling", function() {
   		expect(bowling.isNextTurn()).toBe(true);
   	});
 
-  	it("")
+  });
+
+  describe("it resets", function(){
+
+  	it("resets pins left to 10 after each turn", function(){
+  		bowling.pinsKnockedDown(10);
+  		bowling.nextRound();
+  		expect(bowling.pinsLeft).toEqual(10);
+  	});
+
 
   });
 

@@ -29,3 +29,7 @@ Bowling.prototype.addScore = function() {
 	this.accumulatedScore += (this.originalPins-this.pinsLeft)
 };
 
+Bowling.prototype.nextRound = function() {
+	this.pinsLeft = 10;
+	this.ballsBowled = 2;
+};
