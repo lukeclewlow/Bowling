@@ -8,9 +8,21 @@ var Bowling = function(){
 Bowling.prototype.pinsKnockedDown = function(number) {
 	this.pinsLeft = this.pinsLeft - number;
 	this.ballsBowled += 1;
-	if(this.isNextTurn === true){
-		this.addScore
-	};
+	this.completeTurn;
+};
+
+Bowling.prototype.completeTurn = function(){
+		if(this.pinsLeft === 0) {
+			this.addScore;
+			this.nextRound;
+		}
+		else if(this.ballsBowled === 2) {
+			this.addScore;
+			this.nextRound;
+		}
+		else {
+			return false
+		};
 };
 
 Bowling.prototype.isNextTurn = function() {
